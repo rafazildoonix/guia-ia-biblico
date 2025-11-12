@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia IA Bíblico - Para Criadores de Conteúdo Infantil</title>
     
-    <!-- Importando as Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Paleta de Cores e Fontes */
         :root {
             --azul-principal: #2a6f97;
             --laranja-destaque: #fca311;
@@ -19,12 +17,9 @@
             --texto-principal: #343a40;
             --branco: #ffffff;
             --cinza-suave: #e9ecef;
-
             --fonte-titulos: 'Nunito', sans-serif;
             --fonte-textos: 'Lato', sans-serif;
         }
-
-        /* Estilos Gerais */
         body { 
             font-family: var(--fonte-textos );
             line-height: 1.7; 
@@ -33,8 +28,6 @@
             background-color: var(--fundo-claro); 
             color: var(--texto-principal); 
         }
-
-        /* Cabeçalho */
         header { 
             background: var(--azul-principal); 
             color: var(--branco); 
@@ -55,8 +48,6 @@
             max-width: 600px;
             margin: 10px auto 0;
         }
-
-        /* Títulos das Seções */
         h2 { 
             font-family: var(--fonte-titulos);
             font-weight: 700;
@@ -66,19 +57,15 @@
             margin-top: 0;
             margin-bottom: 40px;
         }
-
-        /* Seções */
         section { 
             padding: 60px 20px; 
             margin: 0 auto;
             max-width: 1100px;
             border-bottom: 1px solid var(--cinza-suave); 
         }
-        #problema-solucao {
+        #problema-solucao, #sobre-mim {
             background-color: var(--branco);
         }
-
-        /* Estilos do Portfólio */
         .portfolio-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -109,8 +96,26 @@
             color: var(--texto-principal);
             margin: 15px 10px;
         }
-
-        /* Lista do Guia */
+        #sobre-mim .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #sobre-mim .texto {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+        #sobre-mim img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--laranja-destaque);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
         #guia ul {
             list-style: none;
             padding: 0;
@@ -126,8 +131,6 @@
             font-weight: bold;
             color: var(--azul-principal);
         }
-
-        /* Rodapé */
         footer { 
             text-align: center; 
             padding: 25px; 
@@ -152,6 +155,7 @@
     <section id="portfolio">
         <h2>Nosso Portfólio em Ação</h2>
         <div class="portfolio-gallery">
+            <!-- Vídeos -->
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/OxuDze6pnl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Música Bíblica da Miriã</h3>
@@ -163,6 +167,20 @@
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/XRo0KPR07ew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Oração Infantil de Confiança</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mim">
+        <div class="container">
+            <img src="rafael.jpg" alt="Foto de Rafael, criador do Guia IA Bíblico">
+            <div class="texto">
+                <h2>De uma necessidade local a uma missão global</h2>
+                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista. O que começou como um projeto para a nossa comunidade local, logo se mostrou algo com potencial para alcançar muito mais crianças e famílias através do YouTube.</p>
+                <p>No início, eu usava ferramentas como o ChatGPT para tarefas do dia a dia. Mas, à medida que explorava e aprendia a arte de criar <em>prompts</em>, um novo mundo de possibilidades se abriu. A partir daí, mergulhei de cabeça: pesquisei outras IAs para geração de imagens, ferramentas para animá-las e até para criar músicas. O Copilot da Microsoft foi um verdadeiro divisor de águas nessa trajetória.</p>
+                <p>No entanto, o caminho não foi fácil. Grande parte do meu aprendizado veio de tutoriais estrangeiros, e senti na pele a dificuldade de adaptar esse conhecimento para a nossa realidade no Brasil. Percebi que havia uma lacuna: uma falta de orientação clara e em português para criadores que desejam usar essa tecnologia de forma ética e eficaz.</p>
+                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta. Gosto tanto de ensinar que até meu filho de 10 anos já participa, me ajudando a escolher personagens e aprendendo a criar seus próprios prompts.</p>
+                <p>Minha missão é encurtar a sua curva de aprendizado. Quero compartilhar o que aprendi para que você também possa usar o poder da Inteligência Artificial para criar conteúdo bíblico infantil de alta qualidade, com propósito e excelência.</p>
             </div>
         </div>
     </section>

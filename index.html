@@ -66,8 +66,6 @@
         #problema-solucao, #sobre-mim {
             background-color: var(--branco);
         }
-
-        /* --- NOVO: Estilos para a Seção de Pilares --- */
         #pilares {
             background-color: var(--fundo-claro);
         }
@@ -87,7 +85,7 @@
             border-top: 4px solid var(--laranja-destaque);
         }
         .pilar-icone {
-            font-size: 3rem; /* Tamanho do ícone */
+            font-size: 3rem;
             color: var(--azul-principal);
         }
         .pilar h3 {
@@ -101,8 +99,6 @@
             font-size: 1rem;
             line-height: 1.6;
         }
-        /* --- Fim dos novos estilos --- */
-
         .portfolio-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -177,6 +173,43 @@
             color: var(--azul-principal);
             display: block;
         }
+        #cta {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        #cta h2 {
+            color: var(--branco);
+            margin-bottom: 20px;
+        }
+        #cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .cta-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .cta-botao {
+            background-color: var(--laranja-destaque);
+            color: var(--texto-principal);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: var(--fonte-titulos);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .cta-botao:hover {
+            background-color: #ffb703;
+            transform: translateY(-3px);
+        }
         footer { 
             text-align: center; 
             padding: 25px; 
@@ -198,7 +231,6 @@
         <p style="text-align: center; max-width: 800px; margin: 20px auto 0;"><strong>Solução proposta:</strong> Um Guia de Boas Práticas com orientações claras sobre curadoria, revisão humana, respeito à autoria e uso consciente de recursos gerados por IA.</p>
     </section>
 
-    <!-- --- NOVA SEÇÃO DE PILARES --- -->
     <section id="pilares">
         <div class="pilares-container">
             <div class="pilar">
@@ -218,12 +250,10 @@
             </div>
         </div>
     </section>
-    <!-- --- FIM DA NOVA SEÇÃO --- -->
 
     <section id="portfolio">
         <h2>Nosso Portfólio em Ação</h2>
         <div class="portfolio-gallery">
-            <!-- Vídeos -->
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/OxuDze6pnl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Música Bíblica da Miriã</h3>
@@ -244,8 +274,8 @@
             <img src="rafael.jpg" alt="Foto de Rafael, criador do Guia IA Bíblico">
             <div class="texto">
                 <h2>De uma necessidade local a uma missão global</h2>
-                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista...</p>
-                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta... Minha missão é encurtar a sua curva de aprendizado.</p>
+                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista. O que começou como um projeto para a nossa comunidade local, logo se mostrou algo com potencial para alcançar muito mais crianças e famílias através do YouTube.</p>
+                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta. Gosto tanto de ensinar que até meu filho de 10 anos já participa, me ajudando a escolher personagens e aprendendo a criar seus próprios prompts. Minha missão é encurtar a sua curva de aprendizado.</p>
             </div>
         </div>
     </section>
@@ -259,9 +289,13 @@
         </ul>
     </section>
 
-    <section id="compromisso">
-        <h2>Nosso Compromisso</h2>
-        <p style="text-align: center;">Nosso trabalho é fundamentado em princípios de IA Responsável (Microsoft, UNESCO) e alinhado aos Objetivos de Desenvolvimento Sustentável da ONU (ODS 4 e 10).</p>
+    <section id="cta">
+        <h2>Pronto para começar sua jornada criativa?</h2>
+        <p>Acompanhe nossos canais no YouTube para ver exemplos práticos, tutoriais em vídeo e muitas novidades sobre o universo da IA na criação de conteúdo!</p>
+        <div class="cta-botoes">
+            <a href="https://www.youtube.com/channel/UCfndt0W_xgyaUTsgfeRUdAg" target="_blank" class="cta-botao">Canal Principal</a>
+            <a href="https://www.youtube.com/channel/UC8wqQH8WTNQwQirEdbYHBzA" target="_blank" class="cta-botao">Canal Mais Recente</a>
+        </div>
     </section>
 
     <footer>

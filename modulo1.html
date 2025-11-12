@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 1: Introdução à IA Generativa - Guia IA Bíblico</title>
+    <title>Guia IA Bíblico - Para Criadores de Conteúdo Infantil</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/guia-ia-biblico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/guia-ia-biblico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/guia-ia-biblico/favicon-16x16.png">
     <link rel="manifest" href="/guia-ia-biblico/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -35,19 +36,22 @@
         header { 
             background: var(--azul-principal); 
             color: var(--branco); 
-            padding: 2rem 1.5rem; 
+            padding: 3rem 1.5rem; 
             text-align: center; 
             border-bottom: 6px solid var(--laranja-destaque);
         }
         h1 { 
             font-family: var(--fonte-titulos);
-            font-size: 2.5rem; 
+            font-size: 3rem; 
             font-weight: 800;
             margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        h1 a {
-            color: var(--branco);
-            text-decoration: none;
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 10px auto 0;
         }
         h2 { 
             font-family: var(--fonte-titulos);
@@ -58,27 +62,182 @@
             margin-top: 0;
             margin-bottom: 40px;
         }
-        h3 {
-            font-family: var(--fonte-titulos);
-            color: var(--azul-principal);
-            font-size: 1.8rem;
-            margin-top: 40px;
-        }
         section { 
             padding: 60px 20px; 
             margin: 0 auto;
-            max-width: 800px; /* Largura otimizada para leitura */
-            background-color: var(--branco);
+            max-width: 1100px;
             border-bottom: 1px solid var(--cinza-suave); 
         }
-        .breadcrumb {
-            text-align: center;
-            margin-bottom: 40px;
+        #problema-solucao, #sobre-mim, #depoimentos {
+            background-color: var(--branco);
         }
-        .breadcrumb a {
-            color: var(--laranja-destaque);
-            text-decoration: none;
+        #pilares {
+            background-color: var(--fundo-claro);
+        }
+        .pilares-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+        }
+        .pilar {
+            background-color: var(--branco);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 300px;
+            border-top: 4px solid var(--laranja-destaque);
+        }
+        .pilar-icone svg {
+            width: 48px;
+            height: 48px;
+            color: var(--azul-principal);
+            stroke-width: 2;
+        }
+        .pilar h3 {
+            font-family: var(--fonte-titulos);
+            font-size: 1.5rem;
+            color: var(--texto-principal);
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .pilar p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .portfolio-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .video-container {
+            width: 320px;
+            text-align: center;
+            background-color: var(--branco);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(42, 111, 151, 0.2);
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+        .video-container h3 {
+            font-family: var(--fonte-titulos);
+            font-size: 1.1rem;
+            color: var(--texto-principal);
+            margin: 15px 10px;
+        }
+        #sobre-mim .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #sobre-mim .texto {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+        #sobre-mim img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--laranja-destaque);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .depoimentos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .depoimento-tag {
+            background-color: var(--cinza-suave);
+            color: var(--texto-principal);
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .depoimento-tag:hover {
+            transform: scale(1.05);
+        }
+        #guia ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        #guia li {
+            background-color: var(--branco);
+            border: 2px solid var(--cinza-suave);
+            padding: 15px;
+            margin: 10px auto;
+            max-width: 500px;
+            border-radius: 8px;
             font-weight: bold;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        #guia li:hover {
+            transform: scale(1.03);
+            border-color: var(--laranja-destaque);
+        }
+        #guia a {
+            text-decoration: none;
+            color: var(--azul-principal);
+            display: block;
+        }
+        #cta {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        #cta h2 {
+            color: var(--branco);
+            margin-bottom: 20px;
+        }
+        #cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .cta-botoes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .cta-botao {
+            background-color: var(--laranja-destaque);
+            color: var(--texto-principal);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: var(--fonte-titulos);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .cta-botao:hover {
+            background-color: #ffb703;
+            transform: translateY(-3px);
         }
         footer { 
             text-align: center; 
@@ -91,40 +250,101 @@
 <body>
 
     <header>
-        <h1><a href="index.html">IA Generativa & Fé Infantil</a></h1>
+        <h1>IA Generativa & Fé Infantil</h1>
+        <p>Um guia de boas práticas para criadores de conteúdo bíblico</p>
     </header>
 
-    <section id="modulo-content">
-        <p class="breadcrumb"><a href="index.html">&larr; Voltar para a Página Inicial</a></p>
-        
-        <h2>Módulo 1: O que é IA Generativa? Seu Novo Pincel Criativo</h2>
+    <section id="problema-solucao">
+        <h2>O Desafio e a Nossa Solução</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;"><strong>Problema identificado:</strong> Criadores de conteúdo enfrentam dificuldades para usar IA generativa de forma ética, segura e alinhada com valores educacionais e espirituais.</p>
+        <p style="text-align: center; max-width: 800px; margin: 20px auto 0;"><strong>Solução proposta:</strong> Um Guia de Boas Práticas com orientações claras sobre curadoria, revisão humana, respeito à autoria e uso consciente de recursos gerados por IA.</p>
+    </section>
 
-        <p>Bem-vindo ao ponto de partida da sua nova jornada criativa! Se você já imaginou ter um assistente incansável, capaz de desenhar cenários bíblicos, sugerir roteiros e até compor melodias a partir das suas ideias, então você está prestes a entender o poder da Inteligência Artificial Generativa.</p>
+    <section id="pilares">
+        <div class="pilares-container">
+            <div class="pilar">
+                <div class="pilar-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+                <h3>Aprenda Rápido</h3>
+                <p>Tutoriais diretos e práticos para você dominar as melhores ferramentas de IA e começar a criar em pouco tempo.</p>
+            </div>
+            <div class="pilar">
+                <div class="pilar-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>Crie com Ética</h3>
+                <p>Um guia baseado em princípios sólidos para garantir que seu trabalho seja seguro, respeitoso e teologicamente responsável.</p>
+            </div>
+            <div class="pilar">
+                <div class="pilar-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <h3>Resultados Incríveis</h3>
+                <p>Aprenda as técnicas para alcançar o estilo visual dos grandes estúdios de animação e cativar seu público.</p>
+            </div>
+        </div>
+    </section>
 
-        <h3>O que é IA Generativa, em termos simples?</h3>
-        <p>Pense na IA Generativa como um 'aprendiz criativo'. Ela estudou uma quantidade gigantesca de livros, imagens, músicas e textos da internet e, com base nesse conhecimento, aprendeu a 'criar' conteúdo novo e original. Você dá uma instrução (um comando chamado <em>prompt</em>), e ela gera uma imagem, um texto ou uma música que nunca existiu antes.</p>
-        <p>Diferente de um simples filtro de foto ou de um corretor ortográfico, ela não apenas modifica algo que já existe; ela <strong>cria do zero</strong>.</p>
+    <section id="portfolio">
+        <h2>Nosso Portfólio em Ação</h2>
+        <div class="portfolio-gallery">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/OxuDze6pnl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Música Bíblica da Miriã</h3>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/O7LbaV7hGY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>A História do Bebê Moisés</h3>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/XRo0KPR07ew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Oração Infantil de Confiança</h3>
+            </div>
+        </div>
+    </section>
 
-        <h3>Os Principais Tipos de IA para Criadores:</h3>
+    <section id="sobre-mim">
+        <div class="container">
+            <img src="rafael.jpg" alt="Foto de Rafael, criador do Guia IA Bíblico">
+            <div class="texto">
+                <h2>De uma necessidade local a uma missão global</h2>
+                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista...</p>
+                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta... Minha missão é encurtar a sua curva de aprendizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <h2>O que dizem sobre nosso conteúdo</h2>
+        <div class="depoimentos-container">
+            <div class="depoimento-tag">"Que trabalho lindo! ✨"</div>
+            <div class="depoimento-tag">"Amei! ❤️"</div>
+            <div class="depoimento-tag">"Deus abençoe este ministério."</div>
+            <div class="depoimento-tag">"Muito bonito!"</div>
+            <div class="depoimento-tag">"Perfeito para as crianças."</div>
+            <div class="depoimento-tag">"A qualidade da animação é incrível!"</div>
+        </div>
+    </section>
+
+    <section id="guia">
+        <h2>Seu Guia de Boas Práticas</h2>
         <ul>
-            <li><strong>Geradores de Imagem (Ex: Midjourney, DALL-E):</strong> Transformam descrições de texto em arte visual. É aqui que a mágica de criar personagens no estilo cartoon 3D, cenários de Jerusalém ou o Mar Vermelho se abrindo acontece.</li>
-            <li><strong>Geradores de Texto (Ex: ChatGPT, Copilot):</strong> Atuam como parceiros de escrita. Podem ajudar a criar o rascunho de um roteiro, adaptar uma história para diferentes idades, sugerir diálogos ou até mesmo traduzir seu conteúdo para outros idiomas.</li>
-            <li><strong>Geradores de Voz e Música:</strong> Criam narrações com vozes realistas ou trilhas sonoras que se encaixam perfeitamente no clima do seu vídeo, eliminando a necessidade de bancos de música caros ou complexos.</li>
+            <li><a href="modulo1.html">Módulo 1: Introdução à IA Generativa</a></li>
+            <li><a href="modulo2.html">Módulo 2: Fundamentos Éticos e Legais</a></li>
+            <li><a href="modulo3.html">Módulo 3: Tutoriais Práticos (Estilo Cartoon 3D )</a></li>
+            <li><a href="modulo4.html">Módulo 4: Dando Vida às Suas Criações</a></li>
+            <li><a href="modulo5.html">Módulo 5: Otimização e Divulgação com IA</a></li>
         </ul>
+    </section>
 
-        <h3>Por que isso é uma revolução para o conteúdo bíblico?</h3>
-        <p>Para nós, criadores de conteúdo com uma missão, a IA Generativa derruba barreiras.</p>
-        <ol>
-            <li><strong>Qualidade Profissional ao seu Alcance:</strong> Você não precisa mais de um estúdio de animação caro para criar visuais que cativem as crianças.</li>
-            <li><strong>Agilidade para Contar Mais Histórias:</strong> O tempo que você levaria para desenhar uma cena pode ser usado para refinar a mensagem teológica e pedagógica da história.</li>
-            <li><strong>Superação do Bloqueio Criativo:</strong> A IA pode ser uma fonte inesgotável de ideias e primeiros rascunhos, dando aquele empurrão inicial para o seu projeto.</li>
-        </ol>
-
-        <h3>Você é o Maestro, a IA é a Orquestra</h3>
-        <p>Este é o ponto mais importante de todo o guia: <strong>a IA é uma ferramenta, não a criadora final.</strong> A tecnologia não tem fé, não tem discernimento espiritual e não entende a profundidade da mensagem bíblica.</p>
-        <p>Seu papel como criador se torna ainda mais crucial. Você é o <strong>maestro</strong> que rege a orquestra. Você define a visão, guia a ferramenta, seleciona os melhores resultados e, acima de tudo, faz a <strong>curadoria final</strong>, garantindo que cada imagem, texto e som esteja 100% alinhado com a Palavra de Deus e com os valores que você deseja transmitir.</p>
-        <p>Neste guia, você não vai aprender apenas a usar a ferramenta, mas a liderá-la com sabedoria e propósito.</p>
-
+    <section id="cta">
+        <h2>Pronto para começar sua jornada criativa?</h2>
+        <p>Acompanhe nossos canais no YouTube para ver exemplos práticos, tutoriais em vídeo e muitas novidades sobre o universo da IA na criação de conteúdo!</p>
+        <div class="cta-botoes">
+            <a href="https://www.youtube.com/channel/UCfndt0W_xgyaUTsgfeRUdAg" target="_blank" class="cta-botao">Canal Principal</a>
+            <a href="https://www.youtube.com/channel/UC8wqQH8WTNQwQirEdbYHBzA" target="_blank" class="cta-botao">Canal Mais Recente</a>
+        </div>
     </section>
 
     <footer>

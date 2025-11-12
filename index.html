@@ -63,7 +63,7 @@
             max-width: 1100px;
             border-bottom: 1px solid var(--cinza-suave); 
         }
-        #problema-solucao, #sobre-mim {
+        #problema-solucao, #sobre-mim, #depoimentos {
             background-color: var(--branco);
         }
         #pilares {
@@ -149,6 +149,32 @@
             border: 5px solid var(--laranja-destaque);
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
+
+        /* --- NOVO: Estilos para a Seção de Depoimentos --- */
+        .depoimentos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .depoimento-tag {
+            background-color: var(--cinza-suave);
+            color: var(--texto-principal);
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .depoimento-tag:hover {
+            transform: scale(1.05);
+        }
+        /* --- Fim dos novos estilos --- */
+
         #guia ul {
             list-style: none;
             padding: 0;
@@ -274,11 +300,25 @@
             <img src="rafael.jpg" alt="Foto de Rafael, criador do Guia IA Bíblico">
             <div class="texto">
                 <h2>De uma necessidade local a uma missão global</h2>
-                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista. O que começou como um projeto para a nossa comunidade local, logo se mostrou algo com potencial para alcançar muito mais crianças e famílias através do YouTube.</p>
-                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta. Gosto tanto de ensinar que até meu filho de 10 anos já participa, me ajudando a escolher personagens e aprendendo a criar seus próprios prompts. Minha missão é encurtar a sua curva de aprendizado.</p>
+                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista...</p>
+                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta... Minha missão é encurtar a sua curva de aprendizado.</p>
             </div>
         </div>
     </section>
+
+    <!-- --- NOVA SEÇÃO DE DEPOIMENTOS --- -->
+    <section id="depoimentos">
+        <h2>O que dizem sobre nosso conteúdo</h2>
+        <div class="depoimentos-container">
+            <div class="depoimento-tag">"Que trabalho lindo! ✨"</div>
+            <div class="depoimento-tag">"Amei! ❤️"</div>
+            <div class="depoimento-tag">"Deus abençoe este ministério."</div>
+            <div class="depoimento-tag">"Muito bonito!"</div>
+            <div class="depoimento-tag">"Perfeito para as crianças."</div>
+            <div class="depoimento-tag">"A qualidade da animação é incrível!"</div>
+        </div>
+    </section>
+    <!-- --- FIM DA NOVA SEÇÃO --- -->
 
     <section id="guia">
         <h2>Seu Guia de Boas Práticas</h2>

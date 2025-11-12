@@ -66,6 +66,43 @@
         #problema-solucao, #sobre-mim {
             background-color: var(--branco);
         }
+
+        /* --- NOVO: Estilos para a Seção de Pilares --- */
+        #pilares {
+            background-color: var(--fundo-claro);
+        }
+        .pilares-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+        }
+        .pilar {
+            background-color: var(--branco);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 300px;
+            border-top: 4px solid var(--laranja-destaque);
+        }
+        .pilar-icone {
+            font-size: 3rem; /* Tamanho do ícone */
+            color: var(--azul-principal);
+        }
+        .pilar h3 {
+            font-family: var(--fonte-titulos);
+            font-size: 1.5rem;
+            color: var(--texto-principal);
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .pilar p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        /* --- Fim dos novos estilos --- */
+
         .portfolio-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -129,7 +166,7 @@
             max-width: 500px;
             border-radius: 8px;
             font-weight: bold;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease;
         }
         #guia li:hover {
             transform: scale(1.03);
@@ -157,13 +194,36 @@
 
     <section id="problema-solucao">
         <h2>O Desafio e a Nossa Solução</h2>
-        <p><strong>Problema identificado:</strong> Criadores de conteúdo enfrentam dificuldades para usar IA generativa de forma ética, segura e alinhada com valores educacionais e espirituais.</p>
-        <p><strong>Solução proposta:</strong> Um Guia de Boas Práticas com orientações claras sobre curadoria, revisão humana, respeito à autoria e uso consciente de recursos gerados por IA.</p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;"><strong>Problema identificado:</strong> Criadores de conteúdo enfrentam dificuldades para usar IA generativa de forma ética, segura e alinhada com valores educacionais e espirituais.</p>
+        <p style="text-align: center; max-width: 800px; margin: 20px auto 0;"><strong>Solução proposta:</strong> Um Guia de Boas Práticas com orientações claras sobre curadoria, revisão humana, respeito à autoria e uso consciente de recursos gerados por IA.</p>
     </section>
+
+    <!-- --- NOVA SEÇÃO DE PILARES --- -->
+    <section id="pilares">
+        <div class="pilares-container">
+            <div class="pilar">
+                <div class="pilar-icone">💡</div>
+                <h3>Aprenda Rápido</h3>
+                <p>Tutoriais diretos e práticos para você dominar as melhores ferramentas de IA e começar a criar em pouco tempo.</p>
+            </div>
+            <div class="pilar">
+                <div class="pilar-icone">🛡️</div>
+                <h3>Crie com Ética</h3>
+                <p>Um guia baseado em princípios sólidos para garantir que seu trabalho seja seguro, respeitoso e teologicamente responsável.</p>
+            </div>
+            <div class="pilar">
+                <div class="pilar-icone">🎨</div>
+                <h3>Resultados Incríveis</h3>
+                <p>Aprenda as técnicas para alcançar o estilo visual dos grandes estúdios de animação e cativar seu público.</p>
+            </div>
+        </div>
+    </section>
+    <!-- --- FIM DA NOVA SEÇÃO --- -->
 
     <section id="portfolio">
         <h2>Nosso Portfólio em Ação</h2>
         <div class="portfolio-gallery">
+            <!-- Vídeos -->
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/OxuDze6pnl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Música Bíblica da Miriã</h3>
@@ -184,11 +244,8 @@
             <img src="rafael.jpg" alt="Foto de Rafael, criador do Guia IA Bíblico">
             <div class="texto">
                 <h2>De uma necessidade local a uma missão global</h2>
-                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista. O que começou como um projeto para a nossa comunidade local, logo se mostrou algo com potencial para alcançar muito mais crianças e famílias através do YouTube.</p>
-                <p>No início, eu usava ferramentas como o ChatGPT para tarefas do dia a dia. Mas, à medida que explorava e aprendia a arte de criar <em>prompts</em>, um novo mundo de possibilidades se abriu. A partir daí, mergulhei de cabeça: pesquisei outras IAs para geração de imagens, ferramentas para animá-las e até para criar músicas. O Copilot da Microsoft foi um verdadeiro divisor de águas nessa trajetória.</p>
-                <p>No entanto, o caminho não foi fácil. Grande parte do meu aprendizado veio de tutoriais estrangeiros, e senti na pele a dificuldade de adaptar esse conhecimento para a nossa realidade no Brasil. Percebi que havia uma lacuna: uma falta de orientação clara e em português para criadores que desejam usar essa tecnologia de forma ética e eficaz.</p>
-                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta. Gosto tanto de ensinar que até meu filho de 10 anos já participa, me ajudando a escolher personagens e aprendendo a criar seus próprios prompts.</p>
-                <p>Minha missão é encurtar a sua curva de aprendizado. Quero compartilhar o que aprendi para que você também possa usar o poder da Inteligência Artificial para criar conteúdo bíblico infantil de alta qualidade, com propósito e excelência.</p>
+                <p>Olá, eu sou o Rafael. Minha jornada com a criação de conteúdo bíblico infantil começou de uma forma muito prática: preparando vídeos para as pregações infantis na minha igreja, a Igreja Adventista...</p>
+                <p>Este guia nasceu dessa percepção. Acredito em explicar as coisas de forma simples e direta... Minha missão é encurtar a sua curva de aprendizado.</p>
             </div>
         </div>
     </section>

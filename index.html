@@ -33,26 +33,42 @@
             background-color: var(--fundo-claro); 
             color: var(--texto-principal); 
         }
+        /* --- ESTILOS DO NOVO CABEÇALHO COM LOGO --- */
         header { 
             background: var(--azul-principal); 
             color: var(--branco); 
-            padding: 3rem 1.5rem; 
+            padding: 2rem 1.5rem; 
             text-align: center; 
             border-bottom: 6px solid var(--laranja-destaque);
         }
-        h1 { 
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--branco);
+        }
+        .logo-container img {
+            width: 50px; /* Tamanho do ícone */
+            height: auto;
+        }
+        .logo-container .titulo-logo {
             font-family: var(--fonte-titulos);
-            font-size: 3rem; 
+            font-size: 2.2rem; 
             font-weight: 800;
             margin: 0;
+            line-height: 1.2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        header p {
-            font-size: 1.3rem;
+        .logo-container .subtitulo-logo {
+            font-size: 1rem;
             opacity: 0.9;
-            max-width: 600px;
-            margin: 10px auto 0;
+            margin: 0;
+            font-family: var(--fonte-textos);
         }
+        /* --- FIM DOS ESTILOS DO NOVO CABEÇALHO --- */
+
         h2 { 
             font-family: var(--fonte-titulos);
             font-weight: 700;
@@ -250,8 +266,11 @@
 <body>
 
     <header>
-        <h1>IA Generativa & Fé Infantil</h1>
-        <p>Um guia de boas práticas para criadores de conteúdo bíblico</p>
+        <a href="index.html" class="logo-container">
+            <img src="favicon-32x32.png" alt="Ícone Guia IA Bíblico">
+            <h1 class="titulo-logo">Guia IA Bíblico</h1>
+            <p class="subtitulo-logo">Para Criadores de Conteúdo Infantil</p>
+        </a>
     </header>
 
     <section id="problema-solucao">

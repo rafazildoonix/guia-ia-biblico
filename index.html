@@ -129,7 +129,16 @@
             max-width: 500px;
             border-radius: 8px;
             font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+        #guia li:hover {
+            transform: scale(1.03);
+            border-color: var(--laranja-destaque);
+        }
+        #guia a {
+            text-decoration: none;
             color: var(--azul-principal);
+            display: block;
         }
         footer { 
             text-align: center; 
@@ -155,7 +164,6 @@
     <section id="portfolio">
         <h2>Nosso Portfólio em Ação</h2>
         <div class="portfolio-gallery">
-            <!-- Vídeos -->
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/OxuDze6pnl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h3>Música Bíblica da Miriã</h3>
@@ -189,8 +197,8 @@
         <h2>Seu Guia de Boas Práticas</h2>
         <ul>
             <li><a href="modulo1.html">Módulo 1: Introdução à IA Generativa</a></li>
-            <li>Módulo 2: Fundamentos Éticos e Legais (Em breve)</li>
-            <li>Módulo 3: Tutoriais Práticos (Em breve)</li>
+            <li><a href="modulo2.html">Módulo 2: Fundamentos Éticos e Legais</a></li>
+            <li><a href="modulo3.html">Módulo 3: Tutoriais Práticos (Estilo Cartoon 3D )</a></li>
         </ul>
     </section>
 
